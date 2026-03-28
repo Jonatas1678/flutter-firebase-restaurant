@@ -11,45 +11,56 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: AppColors.backgroundColor,
       body: Stack(
         children: [
-          Image.asset('assets/banners/banner_splash.png'),
+          // Banner de fundo
+          Positioned.fill(
+            child: Opacity(
+              opacity: 0.3,
+              child: Image.asset(
+                'assets/banners/banner_splash.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                spacing: 32.0,
                 children: [
                   Image.asset('assets/logo.png', width: 192),
+                  const SizedBox(height: 32.0),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Um parceiro inovador para sua",
+                        textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.white, fontSize: 22.0),
                       ),
                       Text(
-                        "melhor experiencia culinária!",
+                        "melhor experiência culinária!",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           color: AppColors.mainColor,
                           fontSize: 22.0,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
                   ),
+                  const SizedBox(height: 48.0),
                   SizedBox(
                     width: double.infinity,
+                    height: 50,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) {
-                              return HomeScreen();
-                            },
+                            builder: (context) => const HomeScreen(),
                           ),
                         );
                       },
-                      child: Text("Bora!"),
+                      child: const Text("Bora!"),
                     ),
                   ),
                 ],
