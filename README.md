@@ -31,15 +31,6 @@ Este projeto é um aplicativo de restaurante construído usando Flutter e Fireba
 4. Configure o Firebase:
    Adicione seu arquivo `google-services.json` para o diretório `android/app`.
 
-## Contribuição
-
-Contribuições são bem-vindas! Por favor, envie um pull request ou abra uma issue para discutir melhorias.
-
 ## Licença
 
 Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## Data de Atualização
-Last updated on 2026-03-28 12:48:03 UTC.
